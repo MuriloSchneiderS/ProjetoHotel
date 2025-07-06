@@ -1,0 +1,54 @@
+package controller;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import view.TelaBuscaProduto;
+import view.TelaCadastroProduto;
+
+public class ControllerCadProduto implements ActionListener {
+
+    TelaCadastroProduto telaCadastroProduto;
+
+    public ControllerCadProduto(TelaCadastroProduto telaCadastroProduto) {
+
+        this.telaCadastroProduto = telaCadastroProduto;
+
+        this.telaCadastroProduto.getjButtonNovo().addActionListener(this);
+        this.telaCadastroProduto.getjButtonCancelar().addActionListener(this);
+        this.telaCadastroProduto.getjButtonGravar().addActionListener(this);
+        this.telaCadastroProduto.getjButtonBuscar().addActionListener(this);
+        this.telaCadastroProduto.getjButtonSair().addActionListener(this);
+
+        //Desenvolver as setagens de situação inicial dos componentes
+        /*this.telaCadastroHospede.getjButtonNovo().setEnabled(true);
+        this.telaCadastroHospede.getjButtonCancelar().setEnabled(false);
+        this.telaCadastroHospede.getjButtonGravar().setEnabled(false);
+        this.telaCadastroHospede.getjButtonBuscar().setEnabled(true);
+        this.telaCadastroHospede.getjButtonSair().setEnabled(true);*/
+        utilities.Utilities.ativaDesativa(this.telaCadastroProduto.getjPanelBotoes(), true);
+        utilities.Utilities.limpaComponentes(this.telaCadastroProduto.getjPanelDados(), false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent evento) {
+        if (evento.getSource() == this.telaCadastroProduto.getjButtonNovo()) {
+            utilities.Utilities.ativaDesativa(this.telaCadastroProduto.getjPanelBotoes(), false);
+            utilities.Utilities.limpaComponentes(this.telaCadastroProduto.getjPanelDados(), true);
+
+        } else if (evento.getSource() == this.telaCadastroProduto.getjButtonCancelar()) {
+            utilities.Utilities.ativaDesativa(this.telaCadastroProduto.getjPanelBotoes(), true);
+            utilities.Utilities.limpaComponentes(this.telaCadastroProduto.getjPanelDados(), false);
+        } else if (evento.getSource() == this.telaCadastroProduto.getjButtonGravar()) {
+            utilities.Utilities.ativaDesativa(this.telaCadastroProduto.getjPanelBotoes(), true);
+            utilities.Utilities.limpaComponentes(this.telaCadastroProduto.getjPanelDados(), false);
+
+        } else if (evento.getSource() == this.telaCadastroProduto.getjButtonBuscar()) {
+            TelaBuscaProduto telaBuscaProduto = new TelaBuscaProduto(null, true);
+            ControllerBuscaProduto controllerBuscaProduto = new ControllerBuscaProduto(telaBuscaProduto);
+            telaBuscaProduto.setVisible(true);
+            
+        } else if (evento.getSource() == this.telaCadastroProduto.getjButtonSair()) {
+            this.telaCadastroProduto.dispose();
+        }
+    }
+}
