@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package view;
 
 import javax.swing.JButton;
@@ -10,16 +5,9 @@ import javax.swing.JComboBox;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
-/**
- *
- * @author house
- */
-public class TelaBuscaFuncionario extends javax.swing.JDialog {
+public class TelaBuscaQuarto extends javax.swing.JDialog {
 
-    /**
-     * Creates new form ModeloBuscas_2024
-     */
-    public TelaBuscaFuncionario(java.awt.Frame parent, boolean modal) {
+    public TelaBuscaQuarto(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -79,7 +67,7 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Funcionarios");
+        setTitle("Tela de busca de Quartos");
         setAlwaysOnTop(true);
         setResizable(false);
 
@@ -89,7 +77,7 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
         jLabelTitulo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(0, 51, 204));
         jLabelTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelTitulo.setText("Funcionário");
+        jLabelTitulo.setText("Quarto");
         jLabelTitulo.setToolTipText("");
 
         javax.swing.GroupLayout jPaneltituloLayout = new javax.swing.GroupLayout(jPaneltitulo);
@@ -110,16 +98,18 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Id", "Nome", "CPf", "Status"
+                "Id", "Descricao", "Andar", "Capacidade", "Animais", "Status"
             }
         ));
         jTableDados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(jTableDados);
         if (jTableDados.getColumnModel().getColumnCount() > 0) {
             jTableDados.getColumnModel().getColumn(0).setMaxWidth(40);
-            jTableDados.getColumnModel().getColumn(1).setMaxWidth(270);
-            jTableDados.getColumnModel().getColumn(2).setMaxWidth(150);
-            jTableDados.getColumnModel().getColumn(3).setMaxWidth(60);
+            jTableDados.getColumnModel().getColumn(1).setMaxWidth(210);
+            jTableDados.getColumnModel().getColumn(2).setMaxWidth(80);
+            jTableDados.getColumnModel().getColumn(3).setMaxWidth(80);
+            jTableDados.getColumnModel().getColumn(4).setMaxWidth(50);
+            jTableDados.getColumnModel().getColumn(5).setMaxWidth(50);
         }
 
         javax.swing.GroupLayout jPanelDadosLayout = new javax.swing.GroupLayout(jPanelDados);
@@ -135,7 +125,7 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
 
         jPanelFiltros.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jCBFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Nome", "CPF" }));
+        jCBFiltro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Id", "Descricao", "Andar", "Capacidade", "Permite animais" }));
 
         jLabelFiltrar.setText("Filtrar Por");
 
@@ -245,14 +235,22 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaBuscaFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBuscaQuarto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaBuscaFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBuscaQuarto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaBuscaFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBuscaQuarto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaBuscaFuncionario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaBuscaQuarto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -265,7 +263,7 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                TelaBuscaFuncionario dialog = new TelaBuscaFuncionario(new javax.swing.JFrame(), true);
+                TelaBuscaQuarto dialog = new TelaBuscaQuarto(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

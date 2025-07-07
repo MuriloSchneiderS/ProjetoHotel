@@ -197,8 +197,7 @@ public class TelaCadastroHospede extends javax.swing.JDialog {
 
         jLabelSexo.setText("Sexo");
 
-        jComboBoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBoxSexo.setSelectedIndex(-1);
+        jComboBoxSexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Prefere não informar", "Masculino", "Feminino" }));
 
         jLabelContato.setText("Contato");
 

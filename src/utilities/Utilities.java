@@ -8,6 +8,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -47,6 +48,9 @@ public class Utilities {
                 componenteAtual.setEnabled(ativa);
             } else if (componenteAtual instanceof JTextArea) {
                 ((JTextArea) componenteAtual).setEnabled(ativa);
+            } else if (componenteAtual instanceof JSpinner) {
+                ((JSpinner) componenteAtual).setValue(0);
+                ((JSpinner) componenteAtual).setEnabled(ativa);
             }
         }
     }

@@ -19,12 +19,6 @@ public class ControllerCadProduto implements ActionListener {
         this.telaCadastroProduto.getjButtonBuscar().addActionListener(this);
         this.telaCadastroProduto.getjButtonSair().addActionListener(this);
 
-        //Desenvolver as setagens de situação inicial dos componentes
-        /*this.telaCadastroHospede.getjButtonNovo().setEnabled(true);
-        this.telaCadastroHospede.getjButtonCancelar().setEnabled(false);
-        this.telaCadastroHospede.getjButtonGravar().setEnabled(false);
-        this.telaCadastroHospede.getjButtonBuscar().setEnabled(true);
-        this.telaCadastroHospede.getjButtonSair().setEnabled(true);*/
         utilities.Utilities.ativaDesativa(this.telaCadastroProduto.getjPanelBotoes(), true);
         utilities.Utilities.limpaComponentes(this.telaCadastroProduto.getjPanelDados(), false);
     }
