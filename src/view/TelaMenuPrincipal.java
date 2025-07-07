@@ -8,6 +8,8 @@ package view;
 import controller.ControllerCadFornecedor;
 import controller.ControllerCadFuncionario;
 import controller.ControllerCadHospede;
+import controller.ControllerCadMarca;
+import controller.ControllerCadModelo;
 import controller.ControllerCadProduto;
 import controller.ControllerCadQuarto;
 import controller.ControllerCadServico;
@@ -117,10 +119,20 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jMenuItemModelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Forward.png"))); // NOI18N
         jMenuItemModelo.setText("Modelo");
+        jMenuItemModelo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemModeloActionPerformed(evt);
+            }
+        });
         jMenuVeiculos.add(jMenuItemModelo);
 
         jMenuItemMarca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Forward.png"))); // NOI18N
         jMenuItemMarca.setText("Marca");
+        jMenuItemMarca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemMarcaActionPerformed(evt);
+            }
+        });
         jMenuVeiculos.add(jMenuItemMarca);
 
         jMenu2.add(jMenuVeiculos);
@@ -246,6 +258,18 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         ControllerCadVeiculo controllerCadVeiculo = new ControllerCadVeiculo(telaCadastroVeiculo);
         telaCadastroVeiculo.setVisible(true);
     }//GEN-LAST:event_jMenuItemVeiculoActionPerformed
+
+    private void jMenuItemModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemModeloActionPerformed
+        TelaCadastroModelo telaCadastroModelo = new TelaCadastroModelo(null,true);
+        ControllerCadModelo controllerCadModelo = new ControllerCadModelo(telaCadastroModelo);
+        telaCadastroModelo.setVisible(true);
+    }//GEN-LAST:event_jMenuItemModeloActionPerformed
+
+    private void jMenuItemMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemMarcaActionPerformed
+        TelaCadastroMarca telaCadastroMarca = new TelaCadastroMarca(null,true);
+        ControllerCadMarca controllerCadMarca = new ControllerCadMarca(telaCadastroMarca);
+        telaCadastroMarca.setVisible(true);
+    }//GEN-LAST:event_jMenuItemMarcaActionPerformed
 
     /**
      * @param args the command line arguments

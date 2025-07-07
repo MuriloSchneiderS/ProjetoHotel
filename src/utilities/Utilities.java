@@ -32,7 +32,10 @@ public class Utilities {
         Component[] vetCmponentes = painel.getComponents();
         for (Component componenteAtual : vetCmponentes) {
             if (componenteAtual instanceof JTextField) {
-                ((JTextField) componenteAtual).setText("");
+                JTextField textField = (JTextField) componenteAtual;
+                if (textField.isEditable()) {
+                    textField.setText(""); 
+                }
                 componenteAtual.setEnabled(ativa);
             } else if (componenteAtual instanceof JFormattedTextField) {
                 ((JFormattedTextField) componenteAtual).setText("");
