@@ -52,7 +52,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/imagens/Delivery.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ve&#xed;culos"/>
+                <Property name="text" type="java.lang.String" value="Estacionamento"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMenuItemEstacionamento">

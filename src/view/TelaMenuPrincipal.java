@@ -12,6 +12,7 @@ import controller.ControllerCadProduto;
 import controller.ControllerCadQuarto;
 import controller.ControllerCadServico;
 import controller.ControllerCadVaga;
+import controller.ControllerCadVeiculo;
 
 /**
  *
@@ -94,7 +95,7 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jMenu2.add(jSeparator1);
 
         jMenuVeiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delivery.png"))); // NOI18N
-        jMenuVeiculos.setText("Veículos");
+        jMenuVeiculos.setText("Estacionamento");
 
         jMenuItemEstacionamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Database.png"))); // NOI18N
         jMenuItemEstacionamento.setText("Vaga");
