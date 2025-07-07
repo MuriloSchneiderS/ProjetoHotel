@@ -9,6 +9,7 @@ import controller.ControllerCadFornecedor;
 import controller.ControllerCadFuncionario;
 import controller.ControllerCadHospede;
 import controller.ControllerCadProduto;
+import controller.ControllerCadQuarto;
 
 /**
  *
