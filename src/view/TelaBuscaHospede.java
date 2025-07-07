@@ -79,7 +79,7 @@ public class TelaBuscaHospede extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Hóspedes");
+        setTitle("Busca de Hóspedes");
         setAlwaysOnTop(true);
         setResizable(false);
 

@@ -79,7 +79,7 @@ public class TelaBuscaProduto extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Produtos");
+        setTitle("Busca de Produtos");
         setAlwaysOnTop(true);
         setResizable(false);
 

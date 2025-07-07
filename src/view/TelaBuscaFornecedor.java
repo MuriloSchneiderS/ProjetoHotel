@@ -79,7 +79,7 @@ public class TelaBuscaFornecedor extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Fornecedores");
+        setTitle("Busca de Fornecedores");
         setAlwaysOnTop(true);
         setResizable(false);
 

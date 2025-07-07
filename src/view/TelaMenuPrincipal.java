@@ -10,6 +10,8 @@ import controller.ControllerCadFuncionario;
 import controller.ControllerCadHospede;
 import controller.ControllerCadProduto;
 import controller.ControllerCadQuarto;
+import controller.ControllerCadServico;
+import controller.ControllerCadVaga;
 
 /**
  *
@@ -40,8 +42,8 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jMenuItemServico = new javax.swing.JMenuItem();
         jMenuItemProduto = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItemEstacionamento = new javax.swing.JMenuItem();
         jMenuVeiculos = new javax.swing.JMenu();
+        jMenuItemEstacionamento = new javax.swing.JMenuItem();
         jMenuItemVeiculo = new javax.swing.JMenuItem();
         jMenuItemModelo = new javax.swing.JMenuItem();
         jMenuItemMarca = new javax.swing.JMenuItem();
@@ -74,6 +76,11 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jMenuItemServico.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/List.png"))); // NOI18N
         jMenuItemServico.setText("Serviço");
+        jMenuItemServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemServicoActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItemServico);
 
         jMenuItemProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Blue tag.png"))); // NOI18N
@@ -86,15 +93,25 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMenuItemProduto);
         jMenu2.add(jSeparator1);
 
-        jMenuItemEstacionamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Database.png"))); // NOI18N
-        jMenuItemEstacionamento.setText("Estacionamento");
-        jMenu2.add(jMenuItemEstacionamento);
-
         jMenuVeiculos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Delivery.png"))); // NOI18N
         jMenuVeiculos.setText("Veículos");
 
+        jMenuItemEstacionamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Database.png"))); // NOI18N
+        jMenuItemEstacionamento.setText("Vaga");
+        jMenuItemEstacionamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEstacionamentoActionPerformed(evt);
+            }
+        });
+        jMenuVeiculos.add(jMenuItemEstacionamento);
+
         jMenuItemVeiculo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Car key.png"))); // NOI18N
         jMenuItemVeiculo.setText("Veículo");
+        jMenuItemVeiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemVeiculoActionPerformed(evt);
+            }
+        });
         jMenuVeiculos.add(jMenuItemVeiculo);
 
         jMenuItemModelo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Forward.png"))); // NOI18N
@@ -210,6 +227,24 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
         ControllerCadQuarto controllerCadQuarto = new ControllerCadQuarto(telaCadastroQuarto);
         telaCadastroQuarto.setVisible(true);
     }//GEN-LAST:event_jMenuItemQuartoActionPerformed
+
+    private void jMenuItemServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemServicoActionPerformed
+        TelaCadastroServico telaCadastroServico = new TelaCadastroServico(null,true);
+        ControllerCadServico controllerCadServico = new ControllerCadServico(telaCadastroServico);
+        telaCadastroServico.setVisible(true);
+    }//GEN-LAST:event_jMenuItemServicoActionPerformed
+
+    private void jMenuItemEstacionamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEstacionamentoActionPerformed
+        TelaCadastroVaga telaCadastroVaga = new TelaCadastroVaga(null,true);
+        ControllerCadVaga controllerCadVaga = new ControllerCadVaga(telaCadastroVaga);
+        telaCadastroVaga.setVisible(true);
+    }//GEN-LAST:event_jMenuItemEstacionamentoActionPerformed
+
+    private void jMenuItemVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVeiculoActionPerformed
+        TelaCadastroVeiculo telaCadastroVeiculo = new TelaCadastroVeiculo(null,true);
+        ControllerCadVeiculo controllerCadVeiculo = new ControllerCadVeiculo(telaCadastroVeiculo);
+        telaCadastroVeiculo.setVisible(true);
+    }//GEN-LAST:event_jMenuItemVeiculoActionPerformed
 
     /**
      * @param args the command line arguments

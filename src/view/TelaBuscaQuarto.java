@@ -67,7 +67,7 @@ public class TelaBuscaQuarto extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Quartos");
+        setTitle("Busca de Quartos");
         setAlwaysOnTop(true);
         setResizable(false);
 

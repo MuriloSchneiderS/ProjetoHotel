@@ -79,7 +79,7 @@ public class TelaBuscaFuncionario extends javax.swing.JDialog {
         jButtonFiltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Tela de busca de Funcionarios");
+        setTitle("Busca de Funcionarios");
         setAlwaysOnTop(true);
         setResizable(false);
 
