@@ -5,11 +5,7 @@ public class Modelo {
     private int id;
     private String descricao;
     private char status;
-
     private Marca marca;
-
-    public Modelo() {
-    }
 
     public Modelo(int id, String descricao, char status, Marca marca) {
         this.id = id;

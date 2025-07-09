@@ -178,14 +178,18 @@ public class TelaMenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Diagram.png"))); // NOI18N
         jMenu3.setText("Movimentos");
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/List.png"))); // NOI18N
         jMenu4.setText("Relatórios");
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Hint.png"))); // NOI18N
         jMenu5.setText("Ajuda");
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/Info.png"))); // NOI18N
         jMenuItem2.setText("Sobre");
         jMenu5.add(jMenuItem2);
 
