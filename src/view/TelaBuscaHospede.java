@@ -110,7 +110,7 @@ public class TelaBuscaHospede extends javax.swing.JDialog {
 
             },
             new String [] {
-                "Id", "Nome", "CPf", "Status"
+                "Id", "Nome", "CPF", "Status"
             }
         ));
         jTableDados.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
